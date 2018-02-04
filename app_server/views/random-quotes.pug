@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    title=title
+    // Import Google Icon Font
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    // Import materialize.css
+    link(type='text/css', rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css', media='screen,projection')
+    // Let browser know website is optimized for mobile
+    meta(name='viewport', content='width=device-width,height=device-height, initial-scale=1.0')
+    meta(charset='utf-8')
+    style(media='screen').
+      body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      }
+      main {
+      flex: 1 0 auto;
+      background-color: gray;
+      background-image: url("https://picsum.photos/1480/600/?random");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      }
+  body
+    main.valign-wrapper
+      .container
+        div
+          .hide-on-small-only.m4.l4.xl4
+          .col.s12.m4.l4.xl4
+            .card.center
+              .card-content
+                h5.flow-text
+                  | "#{quote.content}
+                h6.right-align
+                  | - #{quote.author}
+              .card-action
+                h6.right-align
+                  a(href='') Next Quote
+          .hide-on-small-only.m4.l4.xl4
+    footer.page-footer.deep-purple.darken-4
+      .container
+        .row
+          .col.s12.m12.l12.center
+            span Created with ♥ by Stephen 😍
+    // Import jQuery before materialize.js
+    script(type='text/javascript', src='https://code.jquery.com/jquery-3.2.1.min.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')
